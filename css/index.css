@@ -1,4 +1,12 @@
 /* -------------------- HERO SECTION -------------------- */
+.hero-container {
+  background-image: url("../images/bg.gif");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Hero section using grid */
 section#hero {
   display: grid;
@@ -7,9 +15,9 @@ section#hero {
     "hero-img hero-img hero-info hero-info"
     "hero-img hero-img hero-social hero-social";
   max-height: 50vh;
+  max-width: 60%;
   gap: 1rem;
   border-radius: 15px;
-  padding: 5rem;
   justify-content: center;
   align-content: center;
 }
@@ -111,7 +119,7 @@ section#hero .hero-buttons a:hover,
 section#hero .hero-buttons a:active {
   padding: 1rem 4rem;
   color: var(--text-color);
-  background-color: var(--bg-color);
+  background-color: #00000000;
   border-radius: 20px;
   border: 2px solid var(--text-color);
 }
@@ -122,6 +130,7 @@ section#hero .hero-social {
   justify-content: start;
   align-items: start;
   gap: 5rem;
+  margin-top: 2rem;
 }
 
 /* Social links */
@@ -143,4 +152,127 @@ section#hero .hero-social a:hover,
 section#hero .hero-social a:active {
   color: var(--text-color);
   box-shadow: 0 0 30px 1px var(--text-color);
+}
+
+/* -------------------- SKILLS SECTION -------------------- */
+
+section#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+section#skills .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+section#skills .skills .skill {
+  cursor: pointer;
+}
+
+section#skills .skills #html:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #f06529;
+}
+section#skills .skills #html:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  position: absolute;
+  font-style: italic;
+  top: -20px;
+  left: 15px;
+}
+section#skills .skills #css:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #2965f1;
+}
+section#skills .skills #css:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  font-style: italic;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}
+section#skills .skills #js:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #f0db4f;
+}
+section#skills .skills #js:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  font-style: italic;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}
+section#skills .skills #react:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #61dbfb;
+}
+section#skills .skills #react:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  font-style: italic;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}
+section#skills .skills #tailwind:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #6d28d9;
+}
+section#skills .skills #tailwind:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  font-style: italic;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}
+section#skills .skills #github:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #fafbfc;
+}
+section#skills .skills #github:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  font-style: italic;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}
+section#skills .skills #java:hover {
+  transition: all 0.3s ease;
+  position: relative;
+  color: #f89820;
+}
+section#skills .skills #java:hover:after {
+  content: "8/10";
+  font-size: 1.4rem;
+  font-style: italic;
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}
+
+section#skills .skills .skill i {
+  font-size: 6rem;
+}
+
+section#skills p {
+  text-align: center;
 }

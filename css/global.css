@@ -1,8 +1,9 @@
 /* -------------------- GLOBAL STYLESHEET -------------------- */
 
 /* -------------------- COLORS -------------------- */
-/* BG: #1d2229 */
-/* BG-DARK: #202a3b */
+/* BG: #0f121b */
+/* BG-DARK: #07090c */
+/* BG-DARK-TRANSPARENT: #07090cb7 */
 /* TEXT: #818cf8 */
 /* TEXT-TRANSPARENT: #818df8ad */
 /* TEXT-LIGHT: #e0e8ff */
@@ -10,6 +11,7 @@
 /* -------------------- FONT SIZES -------------------- */
 /* 1REM = 10PX */
 /* H2: 3rem */
+/* P: 1.6REM */
 
 /* Import from Open Sans font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
@@ -19,8 +21,9 @@
 
 /* Variables */
 :root {
-  --bg-color-dark: #1d2229;
-  --bg-color: #202a3b;
+  --bg-color-dark: #07090c;
+  --bg-color-dark-transparent: #07090cb7;
+  --bg-color: #0f121b;
   --text-color: #818cf8;
   --text-color-transparent: #818df8ad;
   --text-color-light: #e0e8ff;
@@ -41,13 +44,24 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: var(--bg-color);
+  background-image: linear-gradient(180deg, var(--bg-color), #020205);
   color: var(--text-color-light);
 }
 
 /* Default H2 style */
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* Center each section */
+section {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 5rem;
 }
 
 /* -------------------- CONTAINER -------------------- */
@@ -61,7 +75,7 @@ h2 {
 /* -------------------- HEADER -------------------- */
 
 header {
-  background-color: var(--bg-color-dark);
+  background-color: var(--bg-color-dark-transparent);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,8 +84,9 @@ header {
   padding: 1rem 5rem;
   border-radius: 0 0 15px 15px;
   margin: 0 auto;
-  margin-bottom: 7rem;
   border-bottom: 1px solid var(--text-color);
+  position: fixed;
+  z-index: 10;
 }
 
 /* Header Logo */
@@ -160,7 +175,7 @@ footer img {
 /* Footer Seperator */
 footer .line {
   width: 2px;
-  height: 30%;
+  height: 40%;
   background-color: var(--text-color-transparent);
   border-radius: 5px;
 }

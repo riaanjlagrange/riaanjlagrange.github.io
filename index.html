@@ -14,12 +14,17 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <!-- Link ./js/script.js using defer in head -->
+    <!-- Link jQuery -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      defer
+    ></script>
+    <!-- Link ./js/script.js -->
     <script src="./js/script.js" defer></script>
   </head>
   <body>
     <!-- -------------------- HEADER -------------------- -->
-    <header>
+    <header id="header">
       <div class="logo-container">
         <!-- Logo for header -->
 
@@ -39,9 +44,9 @@
       </nav>
     </header>
     <!-- Main Container -->
-    <div class="container">
-      <main>
-        <!-- -------------------- HERO SECTION -------------------- -->
+    <main>
+      <!-- -------------------- HERO SECTION -------------------- -->
+      <div class="hero-container">
         <section id="hero">
           <div class="hero-img-container">
             <img
@@ -59,6 +64,7 @@
               dolore repellat tenetur ipsam, veritatis ea! Excepturi
               necessitatibus unde porro aut!
             </p>
+            <!-- Buttons to take user to their respective page -->
             <div class="hero-buttons">
               <a href="#" class="cta">Hire Me</a>
               <a href="#" class="cta">Portfolio</a>
@@ -68,9 +74,10 @@
             <a href="#"><i class="ri-linkedin-box-fill"></i></a>
             <a href="#"><i class="ri-github-fill"></i></a>
           </div>
-          <!-- Buttons to take user to their respective page -->
         </section>
-        <!-- -------------------- SKILLS SECTION -------------------- -->
+      </div>
+      <!-- -------------------- SKILLS SECTION -------------------- -->
+      <div class="skill-container">
         <section id="skills">
           <h2>Skills</h2>
           <div class="skills">
@@ -87,10 +94,13 @@
               <i class="ri-reactjs-fill" id="react"></i>
             </div>
             <div class="skill">
-              <i class="ri-java-fill" id="java"></i>
+              <i class="ri-tailwind-css-fill" id="tailwind"></i>
             </div>
             <div class="skill">
               <i class="ri-github-fill" id="github"></i>
+            </div>
+            <div class="skill">
+              <i class="ri-java-fill" id="java"></i>
             </div>
           </div>
           <p>
@@ -100,7 +110,9 @@
             doloribus minima.
           </p>
         </section>
-        <!-- -------------------- PROJECTS SECTION -------------------- -->
+      </div>
+      <!-- -------------------- PROJECTS SECTION -------------------- -->
+      <div class="projects-container">
         <section id="projects">
           <h2>Projects</h2>
           <div class="projects">
@@ -136,8 +148,8 @@
             <a href="#">View More</a>
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
     <!-- -------------------- FOOTER -------------------- -->
     <footer>
       <img src="./images/logo.svg" alt="Logo" />
