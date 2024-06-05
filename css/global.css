@@ -4,6 +4,7 @@
 /* BG: #1d2229 */
 /* BG-DARK: #202a3b */
 /* TEXT: #818cf8 */
+/* TEXT-TRANSPARENT: #818df8ad */
 /* TEXT-LIGHT: #e0e8ff */
 
 /* -------------------- FONT SIZES -------------------- */
@@ -21,6 +22,7 @@
   --bg-color-dark: #1d2229;
   --bg-color: #202a3b;
   --text-color: #818cf8;
+  --text-color-transparent: #818df8ad;
   --text-color-light: #e0e8ff;
 }
 
@@ -63,14 +65,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 70%;
+  width: 100%;
   min-height: 8rem;
   padding: 1rem 5rem;
   border-radius: 0 0 15px 15px;
   margin: 0 auto;
   margin-bottom: 7rem;
-  border: 2px solid var(--text-color);
-  border-top: 0;
+  border-bottom: 1px solid var(--text-color);
 }
 
 /* Header Logo */
@@ -80,7 +81,7 @@ header .logo-container {
   align-items: center;
   justify-content: start;
   max-width: 30%;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 header .logo-container .logo {
@@ -99,7 +100,7 @@ header .logo-container .name {
 /* Header Navbar */
 
 header nav {
-  width: 40%;
+  width: 30%;
 }
 
 header .navlist {
@@ -134,4 +135,65 @@ header .navlist li a:active {
   font-size: 1.6rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+  width: 100;
+  background-color: var(--bg-color-dark);
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-top: 1px solid var(--text-color);
+  padding: 1rem 2rem;
+  gap: 2rem;
+}
+
+/* Footer Logo */
+footer img {
+  height: 20%;
+}
+
+/* Footer Seperator */
+footer .line {
+  width: 2px;
+  height: 30%;
+  background-color: var(--text-color-transparent);
+  border-radius: 5px;
+}
+
+/* Footer Copyright */
+footer small {
+  font-size: 1.4rem;
+  color: var(--text-color-light);
+}
+
+/* Footer Navbar */
+footer .footer-navbar {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  height: 6rem;
+}
+
+footer .footer-navbar li a:link,
+footer .footer-navbar li a:visited {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+footer .footer-navbar li a:hover,
+footer .footer-navbar li a:active {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
