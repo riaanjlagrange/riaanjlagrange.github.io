@@ -1,0 +1,102 @@
+/* -------------------- HERO SECTION -------------------- */
+section#hero {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template-areas:
+    "hero-img hero-img hero-info hero-info"
+    "hero-img hero-img hero-social hero-social";
+  max-height: 50vh;
+  gap: 3rem;
+  background-color: var(--bg-color-dark);
+  border-radius: 15px;
+  padding: 5rem;
+  justify-content: center;
+  align-content: center;
+}
+
+section#hero .hero-img-container {
+  grid-area: hero-img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--text-color);
+  width: 50rem;
+}
+
+section#hero .hero-img-container img {
+  max-height: 90%;
+  border-radius: 50%;
+}
+
+section#hero .hero-info {
+  grid-area: hero-info;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  gap: 2rem;
+}
+
+section#hero .hero-info h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+section#hero .hero-info h3 {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+section#hero .hero-info p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+section#hero .hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+section#hero .hero-buttons a:link,
+section#hero .hero-buttons a:visited {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--bg-color-dark);
+  background-color: var(--text-color);
+  border-radius: 15px;
+  margin-top: 2rem;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+section#hero .hero-buttons a:hover,
+section#hero .hero-buttons a:active {
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--bg-color-dark);
+  border-radius: 15px;
+  margin-top: 2rem;
+  border: 2px solid var(--text-color);
+}
+
+section#hero .hero-social {
+  grid-area: hero-social;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+
+section#hero .hero-social a {
+  font-size: 4rem;
+  text-decoration: none;
+}

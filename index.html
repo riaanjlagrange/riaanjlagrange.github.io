@@ -7,6 +7,13 @@
     <title>Home - Riaan la Grange</title>
     <!-- Link ./css/global.css -->
     <link rel="stylesheet" href="./css/global.css" />
+    <!-- Link ./css/index.css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Link Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!-- Link ./js/script.js using defer in head -->
     <script src="./js/script.js" defer></script>
   </head>
@@ -17,8 +24,8 @@
       <header>
         <div class="logo-container">
           <!-- Logo for header -->
-          <!-- TODO: Create a logo and add the path to the src attribute -->
-          <img class="logo" src="#" alt="Logo" />
+
+          <img class="logo" src="./images/logo.svg" alt="Logo" />
           <!-- Logo title -->
           <span class="name">Riaan la Grange</span>
         </div>
@@ -36,10 +43,13 @@
       <main>
         <!-- -------------------- HERO SECTION -------------------- -->
         <section id="hero">
-          <img
-            src="./images/riaan-la-grange.jpg"
-            alt="Photo of Riaan la Grange"
-          />
+          <div class="hero-img-container">
+            <img
+              class="hero-image"
+              src="./images/riaan-la-grange.jpg"
+              alt="Photo of Riaan la Grange"
+            />
+          </div>
           <div class="hero-info">
             <h2>Riaan la Grange</h2>
             <h3>Web Developer</h3>
@@ -49,12 +59,18 @@
               dolore repellat tenetur ipsam, veritatis ea! Excepturi
               necessitatibus unde porro aut!
             </p>
-            <!-- Buttons to take user to their respective page -->
             <div class="hero-buttons">
               <a href="#" class="cta">Hire Me</a>
               <a href="#" class="cta">Portfolio</a>
             </div>
           </div>
+          <div class="hero-social">
+            <a href="#" style="color: rgb(49, 49, 245)"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+            <a href="#" style="color: white"><i class="ri-github-fill"></i></a>
+          </div>
+          <!-- Buttons to take user to their respective page -->
         </section>
         <!-- -------------------- SKILLS SECTION -------------------- -->
         <section id="skills">

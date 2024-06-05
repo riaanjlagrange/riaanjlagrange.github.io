@@ -1,11 +1,10 @@
 /* -------------------- GLOBAL STYLESHEET -------------------- */
 
 /* -------------------- COLORS -------------------- */
-/* BG: #1f2937 */
-/* BG-LIGHT: #374151 */
-/* BG-DARK: #111827 */
-/* TEXT: #6366f1 */
-/* TEXT-LIGHT: #818cf8 */
+/* BG: #1d2229 */
+/* BG-DARK: #202a3b */
+/* TEXT: #818cf8 */
+/* TEXT-LIGHT: #edf2ff */
 
 /* -------------------- FONT SIZES -------------------- */
 /* 1REM = 10PX */
@@ -21,8 +20,8 @@
 :root {
   --bg-color: #1d2229;
   --bg-color-dark: #202a3b;
-  --text-color: #6366f1;
-  --text-color-light: #818cf8;
+  --text-color: #818cf8;
+  --text-color-light: #dbe4ff;
 }
 
 /* Universal Reset */
@@ -69,7 +68,7 @@ header {
   padding: 1rem 2rem;
   border-radius: 0 0 15px 15px;
   margin: 0 auto;
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
   border: 2px solid var(--text-color);
   border-top: 0;
 }
@@ -91,7 +90,7 @@ header .logo-container .logo {
 }
 
 header .logo-container .name {
-  color: var(--text-color-light);
+  color: var(--text-color);
   font-family: "Monserrat", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
@@ -116,14 +115,14 @@ header .navlist li a:visited {
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 /* Header nav items styling on hover */
 header .navlist li a:hover,
 header .navlist li a:active {
   color: var(--bg-color-dark);
-  background-color: var(--text-color-light);
+  background-color: var(--text-color);
   text-decoration: none;
   font-weight: 700;
   font-size: 1.3rem;
