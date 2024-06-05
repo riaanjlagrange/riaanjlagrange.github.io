@@ -9,18 +9,18 @@
 
 /* -------------------- FONT SIZES -------------------- */
 /* 1REM = 10PX */
-/* H2: 2.5rem */
+/* H2: 3rem */
 
-/* Import from Google Fonts */
+/* Import from Open Sans font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-/* -------------------- GLOBAL -------------------- */
+/* Import from Open Sans font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"); /* -------------------- GLOBAL -------------------- */
 
 /* Variables */
 :root {
-  --bg-color: #1f2937;
-  --bg-color-light: #374151;
-  --bg-color-dark: #111827;
+  --bg-color: #1d2229;
+  --bg-color-dark: #202a3b;
   --text-color: #6366f1;
   --text-color-light: #818cf8;
 }
@@ -70,6 +70,8 @@ header {
   border-radius: 0 0 15px 15px;
   margin: 0 auto;
   margin-bottom: 10rem;
+  border: 2px solid var(--text-color);
+  border-top: 0;
 }
 
 /* Header Logo */
@@ -77,14 +79,22 @@ header {
 header .logo-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-width: 40%;
+  justify-content: start;
+  max-width: 30%;
   gap: 1rem;
 }
 /* TODO: Add logo and change styling */
 
-header .name {
-  font-size: 1.5rem;
+header .logo-container .logo {
+  width: 10%;
+  height: 10%;
+}
+
+header .logo-container .name {
+  color: var(--text-color-light);
+  font-family: "Monserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 /* Header Navbar */
