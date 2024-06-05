@@ -4,7 +4,7 @@
 /* BG: #1d2229 */
 /* BG-DARK: #202a3b */
 /* TEXT: #818cf8 */
-/* TEXT-LIGHT: #edf2ff */
+/* TEXT-LIGHT: #e0e8ff */
 
 /* -------------------- FONT SIZES -------------------- */
 /* 1REM = 10PX */
@@ -18,10 +18,10 @@
 
 /* Variables */
 :root {
-  --bg-color: #1d2229;
-  --bg-color-dark: #202a3b;
+  --bg-color-dark: #1d2229;
+  --bg-color: #202a3b;
   --text-color: #818cf8;
-  --text-color-light: #dbe4ff;
+  --text-color-light: #e0e8ff;
 }
 
 /* Universal Reset */
@@ -40,12 +40,12 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 /* Default H2 style */
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 /* -------------------- CONTAINER -------------------- */
@@ -64,8 +64,8 @@ header {
   justify-content: space-between;
   align-items: center;
   max-width: 70%;
-  min-height: 6rem;
-  padding: 1rem 2rem;
+  min-height: 8rem;
+  padding: 1rem 5rem;
   border-radius: 0 0 15px 15px;
   margin: 0 auto;
   margin-bottom: 7rem;
@@ -82,25 +82,31 @@ header .logo-container {
   max-width: 30%;
   gap: 1rem;
 }
-/* TODO: Add logo and change styling */
 
 header .logo-container .logo {
   width: 10%;
   height: 10%;
+  color: var(--text-color-light);
 }
 
 header .logo-container .name {
-  color: var(--text-color);
+  color: var(--text-color-light);
   font-family: "Monserrat", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
 /* Header Navbar */
 
+header nav {
+  width: 40%;
+}
+
 header .navlist {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
   list-style: none;
 }
 
@@ -112,10 +118,10 @@ header .navlist li a:visited {
   background-color: none;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.3rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 /* Header nav items styling on hover */
@@ -125,7 +131,7 @@ header .navlist li a:active {
   background-color: var(--text-color);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.3rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
 }

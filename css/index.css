@@ -25,25 +25,30 @@ section#hero .hero-img-container {
 section#hero .hero-img-container img {
   max-height: 90%;
   border-radius: 50%;
-  border: 3px solid var(--text-color);
-  animation: 15s infinite move;
+  animation: 15s infinite move linear;
+  box-shadow: 0 10px 50px -20px var(--text-color);
 }
 
 @keyframes move {
   0% {
     transform: translate(0, 0);
+    box-shadow: 0 10px 50px -20px var(--text-color);
   }
   25% {
-    transform: translate(1rem, -1rem);
+    transform: translate(0, 1rem);
+    box-shadow: 0 10px 55px -20px var(--text-color);
   }
   50% {
-    transform: translate(-1rem, 1rem);
+    transform: translate(0, 0);
+    box-shadow: 0 10px 60px -20px var(--text-color);
   }
   75% {
-    transform: translate(1rem, 1rem);
+    transform: translate(0, 1rem);
+    box-shadow: 0 10px 55px -20px var(--text-color);
   }
   100% {
-    transform: translate(0rem, 0rem);
+    transform: translate(0, 0);
+    box-shadow: 0 10px 50px -20px var(--text-color);
   }
 }
 
@@ -53,7 +58,8 @@ section#hero .hero-info {
   flex-direction: column;
   justify-content: end;
   align-items: start;
-  gap: 2rem;
+  gap: 1rem;
+  width: 80%;
 }
 
 section#hero .hero-info h2 {
@@ -64,11 +70,13 @@ section#hero .hero-info h2 {
 section#hero .hero-info h3 {
   font-size: 2rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 section#hero .hero-info p {
-  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -86,7 +94,7 @@ section#hero .hero-buttons a:visited {
   color: var(--bg-color-dark);
   background-color: var(--text-color);
   border-radius: 15px;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   transition: all 0.5s ease;
   display: flex;
   align-items: center;
@@ -97,13 +105,9 @@ section#hero .hero-buttons a:visited {
 section#hero .hero-buttons a:hover,
 section#hero .hero-buttons a:active {
   padding: 1rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
   color: var(--text-color);
-  background-color: var(--bg-color-dark);
-  border-radius: 15px;
-  margin-top: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 20px;
   border: 2px solid var(--text-color);
 }
 
@@ -112,10 +116,25 @@ section#hero .hero-social {
   display: flex;
   justify-content: start;
   align-items: start;
-  gap: 1rem;
+  gap: 5rem;
 }
 
-section#hero .hero-social a {
+section#hero .hero-social a:link,
+section#hero .hero-social a:visited {
   font-size: 4rem;
   text-decoration: none;
+  padding: 1rem;
+  color: var(--text-color-light);
+  transition: all 0.2s ease;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#hero .hero-social a:hover,
+section#hero .hero-social a:active {
+  color: var(--text-color);
+  box-shadow: 0 0 30px 1px var(--text-color);
 }
