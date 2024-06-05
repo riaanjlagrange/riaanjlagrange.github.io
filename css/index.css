@@ -1,0 +1,115 @@
+/* -------------------- COLORS -------------------- */
+/* BG: #1f2937 */
+/* BG-LIGHT: #374151 */
+/* BG-DARK: #111827 */
+/* TEXT: #6366f1 */
+/* TEXT-LIGHT: #818cf8 */
+
+/* -------------------- FONT SIZES -------------------- */
+/* 1REM = 10PX */
+/* H2: 2.5rem */
+
+/* Import from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* -------------------- GLOBAL -------------------- */
+
+/* Variables */
+:root {
+  --bg-color: #1f2937;
+  --bg-color-light: #374151;
+  --bg-color-dark: #111827;
+  --text-color: #6366f1;
+  --text-color-light: #818cf8;
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font size to 1rem = 10px */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Default H2 style */
+h2 {
+  font-size: 3rem;
+}
+
+/* -------------------- CONTAINER -------------------- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* -------------------- HEADER -------------------- */
+
+header {
+  background-color: var(--bg-color-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70%;
+  min-height: 6rem;
+  padding: 1rem 2rem;
+  border-radius: 0 0 15px 15px;
+  margin: 0 auto;
+}
+
+/* Header Logo */
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40%;
+  gap: 1rem;
+}
+
+header .name {
+  font-size: 1.5rem;
+}
+
+/* Header Navbar */
+
+header .navlist {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+header .navlist li a:link,
+header .navlist li a:visited {
+  color: var(--text-color);
+  background-color: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+header .navlist li a:hover,
+header .navlist li a:active {
+  color: var(--bg-color-dark);
+  background-color: var(--text-color-light);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
