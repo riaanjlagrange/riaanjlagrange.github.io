@@ -6,8 +6,8 @@ section#hero {
     "hero-img hero-img hero-info hero-info"
     "hero-img hero-img hero-social hero-social";
   max-height: 50vh;
-  gap: 3rem;
-  background-color: var(--bg-color-dark);
+  gap: 1rem;
+  /* background-color: var(--bg-color-dark); */
   border-radius: 15px;
   padding: 5rem;
   justify-content: center;
@@ -19,13 +19,32 @@ section#hero .hero-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid var(--text-color);
   width: 50rem;
 }
 
 section#hero .hero-img-container img {
   max-height: 90%;
   border-radius: 50%;
+  border: 3px solid var(--text-color);
+  animation: 15s infinite move;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(1rem, -1rem);
+  }
+  50% {
+    transform: translate(-1rem, 1rem);
+  }
+  75% {
+    transform: translate(1rem, 1rem);
+  }
+  100% {
+    transform: translate(0rem, 0rem);
+  }
 }
 
 section#hero .hero-info {
