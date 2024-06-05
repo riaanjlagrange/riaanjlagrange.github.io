@@ -1,3 +1,5 @@
+/* -------------------- GLOBAL STYLESHEET -------------------- */
+
 /* -------------------- COLORS -------------------- */
 /* BG: #1f2937 */
 /* BG-LIGHT: #374151 */
@@ -67,6 +69,7 @@ header {
   padding: 1rem 2rem;
   border-radius: 0 0 15px 15px;
   margin: 0 auto;
+  margin-bottom: 10rem;
 }
 
 /* Header Logo */
@@ -78,6 +81,7 @@ header .logo-container {
   max-width: 40%;
   gap: 1rem;
 }
+/* TODO: Add logo and change styling */
 
 header .name {
   font-size: 1.5rem;
@@ -91,6 +95,8 @@ header .navlist {
   list-style: none;
 }
 
+/* Header nav items styling */
+
 header .navlist li a:link,
 header .navlist li a:visited {
   color: var(--text-color);
@@ -103,6 +109,7 @@ header .navlist li a:visited {
   transition: all 0.3s ease;
 }
 
+/* Header nav items styling on hover */
 header .navlist li a:hover,
 header .navlist li a:active {
   color: var(--bg-color-dark);
