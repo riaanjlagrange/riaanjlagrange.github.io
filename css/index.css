@@ -1,27 +1,37 @@
 /* -------------------- HERO SECTION -------------------- */
 .hero-container {
-  background-image: url("../images/bg.gif");
+  background-image: url("../images/hero-bg.gif");
   background-size: cover;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--text-color);
 }
 
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b04313a;
+  backdrop-filter: blur(3px);
+}
+
 /* Hero section using grid */
 section#hero {
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template: 3fr 1fr / repeat(4, 1fr);
   grid-template-areas:
     "hero-img hero-img hero-info hero-info"
     "hero-img hero-img hero-social hero-social";
   max-height: 50vh;
-  max-width: 60%;
   gap: 1rem;
   justify-content: center;
   align-content: center;
-  background-color: var(--bg-color-dark-transparent);
+  z-index: 1;
 }
 
 /* Hero image container */
@@ -30,13 +40,13 @@ section#hero .hero-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50rem;
+  max-width: 50rem;
 }
 
 section#hero .hero-img-container img {
   max-height: 90%;
   border-radius: 50%;
-  animation: 15s infinite move linear;
+  animation: 10s infinite move linear;
   box-shadow: 0 10px 50px -20px var(--text-color);
 }
 
@@ -108,7 +118,7 @@ section#hero .hero-buttons a:visited {
   text-decoration: none;
   color: var(--bg-color-dark);
   background-color: var(--text-color);
-  border-radius: 15px;
+  /* border-radius: 15px; */
   margin-bottom: 2rem;
   transition: all 0.5s ease;
   display: flex;
@@ -122,7 +132,7 @@ section#hero .hero-buttons a:active {
   padding: 1rem 4rem;
   color: var(--text-color);
   background-color: #00000000;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   border: 2px solid var(--text-color);
 }
 
@@ -157,6 +167,11 @@ section#hero .hero-social a:active {
 }
 
 /* -------------------- SKILLS SECTION -------------------- */
+.skills-container {
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 5rem;
+}
 
 section#skills {
   display: flex;
@@ -168,6 +183,10 @@ section#skills {
   margin: 0 auto;
 }
 
+section#skills h2 {
+  text-transform: uppercase;
+}
+
 section#skills .skills {
   display: flex;
   justify-content: center;
@@ -175,106 +194,346 @@ section#skills .skills {
   gap: 2rem;
 }
 
-section#skills .skills .skill {
+section#skills .skills .skill i {
   cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  font-size: 6rem;
 }
 
-section#skills .skills #html:hover {
+section#skills .skills .skill:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+  color: var(--text-color);
+}
+
+section#skills .skills .skill i::after {
+  cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  font-size: 1.4rem;
+  position: absolute;
+  font-style: italic;
+  top: -20px;
+  left: 15px;
+}
+
+/* HTML */
+section#skills .skills #html:hover {
   color: #f06529;
 }
-section#skills .skills #html:hover:after {
+section#skills .skills #html:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  position: absolute;
-  font-style: italic;
-  top: -20px;
-  left: 15px;
 }
+/* CSS */
 section#skills .skills #css:hover {
-  transition: all 0.3s ease;
-  position: relative;
   color: #2965f1;
 }
-section#skills .skills #css:hover:after {
+section#skills .skills #css:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  font-style: italic;
-  position: absolute;
-  top: -20px;
-  left: 15px;
 }
+/* JavaScript */
 section#skills .skills #js:hover {
-  transition: all 0.3s ease;
-  position: relative;
   color: #f0db4f;
 }
-section#skills .skills #js:hover:after {
+section#skills .skills #js:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  font-style: italic;
-  position: absolute;
-  top: -20px;
-  left: 15px;
 }
+/* React */
 section#skills .skills #react:hover {
-  transition: all 0.3s ease;
-  position: relative;
   color: #61dbfb;
 }
-section#skills .skills #react:hover:after {
+section#skills .skills #react:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  font-style: italic;
-  position: absolute;
-  top: -20px;
-  left: 15px;
 }
+/* Tailwind */
 section#skills .skills #tailwind:hover {
-  transition: all 0.3s ease;
-  position: relative;
   color: #6d28d9;
 }
-section#skills .skills #tailwind:hover:after {
+section#skills .skills #tailwind:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  font-style: italic;
-  position: absolute;
-  top: -20px;
-  left: 15px;
 }
+/* GitHub */
 section#skills .skills #github:hover {
-  transition: all 0.3s ease;
-  position: relative;
   color: #fafbfc;
 }
-section#skills .skills #github:hover:after {
+section#skills .skills #github:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  font-style: italic;
-  position: absolute;
-  top: -20px;
-  left: 15px;
 }
+/* Java */
 section#skills .skills #java:hover {
-  transition: all 0.3s ease;
-  position: relative;
   color: #f89820;
 }
-section#skills .skills #java:hover:after {
+section#skills .skills #java:hover::after {
   content: "8/10";
-  font-size: 1.4rem;
-  font-style: italic;
-  position: absolute;
-  top: -20px;
-  left: 15px;
-}
-
-section#skills .skills .skill i {
-  font-size: 6rem;
 }
 
 section#skills p {
   text-align: center;
+}
+
+/* -------------------- PROJECTS SECTION -------------------- */
+
+.projects-container {
+  padding-bottom: 5rem;
+  background-image: url("../images/projects-bg.gif");
+  position: relative;
+}
+
+.projects-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b04313a;
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+section#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+section#projects h2 {
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+section#projects .projects {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  flex: 1;
+}
+
+section#projects .projects .project {
+  display: grid;
+  grid-template: auto-fit 5fr 1fr 1fr 1fr / repeat(2, minmax(1fr));
+  grid-template-areas:
+    "project-img project-img"
+    "project-title project-title"
+    "project-desc project-desc"
+    "project-btn1 project-btn2";
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  min-width: 50%;
+  background-color: var(--bg-color);
+  border-radius: 15px;
+  column-gap: 2px;
+  box-shadow: -5px 5px 0 0 var(--text-color-transparent);
+  border: 1px solid var(--bg-color);
+}
+
+section#projects .projects .project .project-img {
+  grid-area: project-img;
+  max-width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+section#projects .projects .project .project-img:hover {
+  transform: scale(1.1);
+}
+
+section#projects .projects .project h3 {
+  grid-area: project-title;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: var(--bg-color);
+  z-index: 2;
+}
+
+section#projects .projects .project p {
+  grid-area: project-desc;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 2rem 2rem;
+  margin-bottom: 2rem;
+}
+
+section#projects .projects .project a:link,
+section#projects .projects .project a:visited {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--bg-color-dark);
+  background-color: var(--text-color);
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+section#projects .projects .project a:hover,
+section#projects .projects .project a:active {
+  padding: 1rem 3rem;
+  color: var(--text-color);
+  background-color: #00000000;
+  border: 2px solid var(--text-color);
+}
+
+section#projects .projects .project .preview {
+  grid-area: project-btn1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 0 15px;
+}
+
+section#projects .projects .project .on-github {
+  grid-area: project-btn2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 15px 0;
+}
+
+section#projects .view-more:link,
+section#projects .view-more:visited {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--bg-color-dark);
+  background-color: var(--text-color);
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  z-index: 2;
+}
+
+section#projects .view-more:hover,
+section#projects .view-more:active {
+  padding: 1rem 3rem;
+  color: var(--text-color);
+  background-color: #00000000;
+  border: 2px solid var(--text-color);
+}
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+@media only screen and (max-width: 1700px) {
+  section#projects {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  section#hero .hero-img-container {
+    max-width: 40rem;
+    margin-bottom: 5rem;
+  }
+
+  section#skills {
+    width: 60%;
+  }
+
+  section#projects {
+    width: 40%;
+  }
+  section#projects .projects {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  section#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  section#hero .hero-img-container {
+    width: 30%;
+    margin-bottom: 5rem;
+  }
+
+  section#hero .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#hero .hero-info p {
+    text-align: center;
+  }
+
+  section#hero .hero-social {
+    justify-content: start;
+  }
+
+  section#skills {
+    width: 80%;
+  }
+
+  section#projects {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  section#skills {
+    width: 90%;
+  }
+
+  section#skills .skills {
+    flex-wrap: wrap;
+  }
+
+  section#projects {
+    width: 70%;
+  }
+
+  section#projects .projects .project a:link,
+  section#projects .projects .project a:visited {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section#projects {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section#hero .hero-info h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  section#hero .hero-info h2 {
+    font-size: 2rem;
+  }
+
+  section#hero .hero-info h3 {
+    font-size: 1.5rem;
+  }
+
+  section#projects {
+    width: 100%;
+  }
 }
