@@ -608,7 +608,6 @@ section#projects .view-more:active {
   }
 
   section#hero {
-    margin-top: 15rem;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: row;
