@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--text-color);
+  position: relative;
 }
 
 .hero-container::after {
@@ -20,7 +21,6 @@
   backdrop-filter: blur(3px);
 }
 
-/* Hero section using grid */
 section#hero {
   display: grid;
   grid-template: 3fr 1fr / repeat(4, 1fr);
@@ -34,8 +34,7 @@ section#hero {
   z-index: 1;
 }
 
-/* Hero image container */
-section#hero .hero-img-container {
+.hero-img-container {
   grid-area: hero-img;
   display: flex;
   justify-content: end;
@@ -43,40 +42,28 @@ section#hero .hero-img-container {
   max-width: 50rem;
 }
 
-section#hero .hero-img-container img {
+.hero-img-container img {
   max-height: 30rem;
   border-radius: 50%;
   animation: 10s infinite move linear;
   box-shadow: 0 10px 50px -20px var(--text-color);
 }
 
-/* Slow animation to make avatar feel more alive */
-
 @keyframes move {
-  0% {
-    transform: translate(0, 0);
-    box-shadow: 0 10px 50px -20px var(--text-color);
-  }
-  25% {
-    transform: translate(0, 1.5rem);
-    box-shadow: 0 10px 55px -20px var(--text-color);
-  }
-  50% {
-    transform: translate(0, 0);
-    box-shadow: 0 10px 60px -20px var(--text-color);
-  }
-  75% {
-    transform: translate(0, 1.5rem);
-    box-shadow: 0 10px 55px -20px var(--text-color);
-  }
+  0%,
+  50%,
   100% {
     transform: translate(0, 0);
     box-shadow: 0 10px 50px -20px var(--text-color);
   }
+  25%,
+  75% {
+    transform: translate(0, 1.5rem);
+    box-shadow: 0 10px 55px -20px var(--text-color);
+  }
 }
 
-/* Hero info section using flexbox in column */
-section#hero .hero-info {
+.hero-info {
   grid-area: hero-info;
   display: flex;
   flex-direction: column;
@@ -86,32 +73,32 @@ section#hero .hero-info {
   width: 80%;
 }
 
-section#hero .hero-info h2 {
+.hero-info h2 {
   font-size: 4rem;
   font-weight: 700;
 }
 
-section#hero .hero-info h3 {
+.hero-info h3 {
   font-size: 2rem;
   font-style: italic;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 
-section#hero .hero-info p {
+.hero-info p {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
   font-weight: 400;
+  width: 50%;
 }
 
-/* Hero buttons */
-section#hero .hero-buttons {
+.hero-buttons {
   display: flex;
   gap: 1rem;
 }
 
-section#hero .hero-buttons a:link,
-section#hero .hero-buttons a:visited {
+.hero-buttons a:link,
+.hero-buttons a:visited {
   padding: 1rem 2rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -126,15 +113,15 @@ section#hero .hero-buttons a:visited {
   border: 2px solid transparent;
 }
 
-section#hero .hero-buttons a:hover,
-section#hero .hero-buttons a:active {
+.hero-buttons a:hover,
+.hero-buttons a:active {
   padding: 1rem 4rem;
   color: var(--text-color);
   background-color: #00000000;
   border: 2px solid var(--text-color);
 }
 
-section#hero .hero-social {
+.hero-social {
   grid-area: hero-social;
   display: flex;
   justify-content: start;
@@ -144,9 +131,8 @@ section#hero .hero-social {
   margin-left: 2rem;
 }
 
-/* Social links */
-section#hero .hero-social a:link,
-section#hero .hero-social a:visited {
+.hero-social a:link,
+.hero-social a:visited {
   font-size: 4rem;
   text-decoration: none;
   padding: 1rem;
@@ -159,8 +145,8 @@ section#hero .hero-social a:visited {
   justify-content: center;
 }
 
-section#hero .hero-social a:hover,
-section#hero .hero-social a:active {
+.hero-social a:hover,
+.hero-social a:active {
   color: var(--text-color);
   box-shadow: 0 0 30px 1px var(--text-color);
 }
@@ -186,27 +172,27 @@ section#skills h2 {
   text-transform: uppercase;
 }
 
-section#skills .skills {
+.skills {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-section#skills .skills .skill i {
+.skill i {
   cursor: pointer;
   transition: all 0.5s ease;
   position: relative;
   font-size: 6rem;
 }
 
-section#skills .skills .skill:hover {
+.skill:hover {
   transform: scale(1.2);
   transition: all 0.5s ease;
   color: var(--text-color);
 }
 
-section#skills .skills .skill i::after {
+.skill i::after {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -217,53 +203,46 @@ section#skills .skills .skill i::after {
   left: 15px;
 }
 
-/* HTML */
-section#skills .skills #html:hover {
+#html:hover {
   color: #f06529;
 }
-section#skills .skills #html:hover::after {
+#html:hover::after {
   content: "8/10";
 }
-/* CSS */
-section#skills .skills #css:hover {
+#css:hover {
   color: #2965f1;
 }
-section#skills .skills #css:hover::after {
+#css:hover::after {
   content: "8/10";
 }
-/* JavaScript */
-section#skills .skills #js:hover {
+#js:hover {
   color: #f0db4f;
 }
-section#skills .skills #js:hover::after {
+#js:hover::after {
   content: "8/10";
 }
-/* React */
-section#skills .skills #react:hover {
+#react:hover {
   color: #61dbfb;
 }
-section#skills .skills #react:hover::after {
+#react:hover::after {
   content: "8/10";
 }
-/* Tailwind */
-section#skills .skills #tailwind:hover {
+#tailwind:hover {
   color: #6d28d9;
 }
-section#skills .skills #tailwind:hover::after {
+#tailwind:hover::after {
   content: "8/10";
 }
-/* GitHub */
-section#skills .skills #github:hover {
+#github:hover {
   color: #fafbfc;
 }
-section#skills .skills #github:hover::after {
+#github:hover::after {
   content: "8/10";
 }
-/* Java */
-section#skills .skills #java:hover {
+#java:hover {
   color: #f89820;
 }
-section#skills .skills #java:hover::after {
+#java:hover::after {
   content: "8/10";
 }
 
@@ -272,7 +251,6 @@ section#skills p {
 }
 
 /* -------------------- PROJECTS SECTION -------------------- */
-
 .projects-container {
   padding-bottom: 5rem;
   background-image: url("../images/projects-bg.gif");
@@ -306,7 +284,7 @@ section#projects h2 {
   z-index: 2;
 }
 
-section#projects .projects {
+.projects {
   z-index: 2;
   display: flex;
   align-items: center;
@@ -315,7 +293,7 @@ section#projects .projects {
   flex: 1;
 }
 
-section#projects .projects .project {
+.project {
   display: grid;
   grid-template: auto-fit 5fr 1fr 1fr 1fr / repeat(2, minmax(1fr));
   grid-template-areas:
@@ -335,7 +313,7 @@ section#projects .projects .project {
   border: 1px solid var(--bg-color);
 }
 
-section#projects .projects .project .project-img {
+.project .project-img {
   grid-area: project-img;
   max-width: 100%;
   overflow: hidden;
@@ -343,11 +321,11 @@ section#projects .projects .project .project-img {
   transition: all 0.5s ease;
 }
 
-section#projects .projects .project .project-img:hover {
+.project .project-img:hover {
   transform: scale(1.1);
 }
 
-section#projects .projects .project h3 {
+.project h3 {
   grid-area: project-title;
   text-align: center;
   font-size: 2rem;
@@ -357,7 +335,7 @@ section#projects .projects .project h3 {
   z-index: 2;
 }
 
-section#projects .projects .project p {
+.project p {
   grid-area: project-desc;
   text-align: center;
   font-size: 1.6rem;
@@ -365,8 +343,8 @@ section#projects .projects .project p {
   margin-bottom: 2rem;
 }
 
-section#projects .projects .project a:link,
-section#projects .projects .project a:visited {
+.project a:link,
+.project a:visited {
   padding: 1rem 2rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -378,103 +356,62 @@ section#projects .projects .project a:visited {
   align-items: center;
   justify-content: center;
   border: 2px solid transparent;
+  margin-bottom: 2rem;
 }
 
-section#projects .projects .project a:hover,
-section#projects .projects .project a:active {
-  padding: 1rem 3rem;
+.project a:hover,
+.project a:active {
+  padding: 1rem 4rem;
   color: var(--text-color);
   background-color: #00000000;
   border: 2px solid var(--text-color);
 }
 
-section#projects .projects .project .preview {
+.project a:first-of-type {
   grid-area: project-btn1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 0 0 15px;
 }
 
-section#projects .projects .project .on-github {
+.project a:last-of-type {
   grid-area: project-btn2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 0 15px 0;
-}
-
-section#projects .view-more:link,
-section#projects .view-more:visited {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--bg-color-dark);
-  background-color: var(--text-color);
-  transition: all 0.5s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid transparent;
-  z-index: 2;
-}
-
-section#projects .view-more:hover,
-section#projects .view-more:active {
-  padding: 1rem 3rem;
-  color: var(--text-color);
-  background-color: #00000000;
-  border: 2px solid var(--text-color);
 }
 
 /* -------------------- MEDIA QUERIES -------------------- */
 
-@media only screen and (max-width: 1700px) {
-  section#projects {
-    width: 20%;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  section#hero .hero-img-container img {
-    max-height: 30rem;
-  }
-
-  section#skills {
-    width: 60%;
-  }
-
-  section#projects {
-    width: 40%;
-  }
-  section#projects .projects {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-height: 550px) and (orientation: landscape) {
-  section#hero .hero-social a:link,
-  section#hero .hero-social a:visited {
-    display: none;
-  }
-  section#hero .hero-info h2 {
+/* Mobile and Smaller Screens */
+@media screen and (max-width: 56.25em) {
+  /* HERO SECTION */
+  .hero-info h2 {
     font-size: 3rem;
   }
 
-  section#hero .hero-img-container img {
-    max-height: 20rem;
+  .hero-info h3 {
+    font-size: 1.5rem;
   }
 
-  section#hero .hero-info {
-    margin-top: 10rem;
+  .hero-info p {
+    font-size: 1.2rem;
   }
-}
 
-@media only screen and (max-width: 1200px) {
-  .hero-container {
-    padding-top: 10rem;
-    height: 100svh;
+  .hero-buttons a:link,
+  .hero-buttons a:visited {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-social {
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .hero-social a:link,
+  .hero-social a:visited {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .hero-social {
+    margin-top: 0;
+    margin-left: 0;
   }
 
   section#hero {
@@ -483,206 +420,173 @@ section#projects .view-more:active {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    max-height: 80vh;
+    margin: 0 2rem;
   }
 
-  section#hero .hero-img-container {
-    margin-bottom: 5rem;
-    width: 30%;
+  .hero-img-container {
+    max-height: 20rem;
+    display: flex;
     justify-content: center;
   }
 
-  section#hero .hero-img-container img {
-    max-height: 15rem;
+  .hero-img-container img {
+    max-height: 20rem;
   }
 
-  section#hero .hero-info {
+  .hero-info {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* SKILLS SECTION */
+  section#skills {
+    width: 90%;
+  }
+
+  section#skills h2 {
+    font-size: 1.5rem;
+  }
+
+  .skills {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .skill i {
+    font-size: 3rem;
+  }
+
+  /* PROJECTS SECTION */
+  section#projects {
+    width: 90%;
+  }
+
+  section#projects h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project {
+    grid-template-areas:
+      "project-img"
+      "project-title"
+      "project-desc"
+      "project-btn1"
+      "project-btn2";
+    max-width: 100%;
+  }
+}
+
+/* Tablets and Medium Screens */
+@media screen and (min-width: 56.25em) and (max-width: 90em) {
+  /* HERO SECTION */
+
+  .hero-info h2 {
+    font-size: 3.5rem;
+  }
+
+  .hero-info h3 {
+    font-size: 1.75rem;
+  }
+
+  .hero-info p {
+    font-size: 1.4rem;
+    max-width: 50%;
+  }
+
+  .hero-buttons a:link,
+  .hero-buttons a:visited {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .hero-social {
+    justify-content: start;
+    gap: 3rem;
+  }
+
+  .hero-social a:link,
+  .hero-social a:visited {
+    font-size: 3rem;
+    padding: 0.75rem;
+  }
+
+  .hero-social {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  section#hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
+    max-height: 70vh;
+    margin: 0 3rem;
   }
 
-  section#hero .hero-info h2 {
-    font-size: 3rem;
-  }
-  section#hero .hero-info p {
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  section#hero .hero-social {
-    margin-left: 0;
-  }
-
-  section#skills {
-    width: 80%;
-  }
-
-  section#projects {
-    width: 50%;
-  }
-
-  section#hero .hero-buttons a:link,
-  section#hero .hero-buttons a:visited {
-    margin-bottom: 0;
-  }
-
-  section#hero .hero-social a:link,
-  section#hero .hero-social a:visited {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 870px) {
-  section#skills {
-    width: 90%;
-  }
-
-  section#skills .skills {
-    flex-wrap: wrap;
-  }
-
-  section#projects {
-    width: 70%;
-  }
-
-  section#projects .projects .project a:link,
-  section#projects .projects .project a:visited {
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  section#projects {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  section#hero .hero-info h2 {
-    font-size: 3rem;
-  }
-  section#projects .projects .project a:link,
-  section#projects .projects .project a:visited {
-    font-size: 1.1rem;
-  }
-}
-
-@media only screen and (max-width: 403px) {
-  section#hero .hero-info h2 {
-    font-size: 2rem;
-  }
-
-  section#hero .hero-info h3 {
-    font-size: 1.5rem;
-  }
-
-  section#hero .hero-info p {
-    font-size: 1.3rem;
-  }
-
-  section#skills .skills .skill i {
-    font-size: 3rem;
-  }
-
-  section#skills p {
-    font-size: 1rem;
-  }
-
-  section#projects .projects .project h3 {
-    font-size: 1.5rem;
-  }
-
-  section#projects .projects .project p {
-    font-size: 1rem;
-  }
-
-  section#projects {
-    width: 100%;
-  }
-
-  section#projects .projects .project a:link,
-  section#projects .projects .project a:visited {
-    font-size: 1rem;
-    padding: 1rem 0;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  section#hero .hero-buttons a:link,
-  section#hero .hero-buttons a:visited {
-    font-size: 1.3rem;
-    width: 10rem;
-  }
-  section#hero .hero-buttons a:hover,
-  section#hero .hero-buttons a:active {
-    padding: 1rem 2rem;
-  }
-}
-
-@media only screen and (max-width: 1080px) and (max-height: 800px) and (orientation: landscape) {
-  h2 {
-    font-size: 2rem;
-  }
-
-  section#hero {
-    margin-bottom: 5rem;
+  .hero-img-container {
+    max-height: 25rem;
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-  }
-  section#hero .hero-img-container img {
-    max-height: 15%;
+    justify-content: center;
   }
 
-  section#hero .hero-info h2 {
-    font-size: 1.5rem;
+  .hero-img-container img {
+    max-height: 25rem;
   }
-  section#hero .hero-info h3 {
-    font-size: 1.3rem;
+
+  .hero-info {
+    width: 100%;
+    text-align: center;
+    align-items: center;
   }
-  section#hero .hero-info p {
-    font-size: 1rem;
+
+  /* SKILLS SECTION */
+  section#skills {
     width: 80%;
   }
-  section#hero .hero-buttons a:link,
-  section#hero .hero-buttons a:visited {
-    font-size: 1rem;
-    margin-bottom: 0;
+
+  section#skills h2 {
+    font-size: 1.75rem;
   }
 
-  section#hero .hero-social {
-    display: none;
+  .skills {
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
 
-  section#skills .skills .skill i {
-    font-size: 3rem;
+  .skill i {
+    font-size: 4rem;
   }
 
-  section#skills p {
-    font-size: 1rem;
-  }
-
-  section#projects .projects .project h3 {
-    font-size: 1.5rem;
-  }
-
-  section#projects .projects .project p {
-    font-size: 1rem;
-  }
-
+  /* PROJECTS SECTION */
   section#projects {
-    width: 50%;
+    width: 80%;
   }
 
-  header .menu-overlay ul.mobile-navlist {
-    gap: 2rem;
-    margin-bottom: 5rem;
-    flex-direction: row;
+  section#projects h2 {
+    font-size: 1.75rem;
   }
 
-  header .menu-overlay ul.mobile-navlist li a:link,
-  header .menu-overlay ul.mobile-navlist li a:visited {
-    font-size: 2.5rem;
+  .projects {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .project {
+    grid-template-areas:
+      "project-img"
+      "project-title"
+      "project-desc"
+      "project-btn1"
+      "project-btn2";
+    max-width: 100%;
   }
 }
