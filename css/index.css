@@ -1,10 +1,12 @@
 /* -------------------- HERO SECTION -------------------- */
 .hero-container {
   background-image: url("../images/bg.gif");
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid var(--text-color);
 }
 
 /* Hero section using grid */
@@ -17,9 +19,9 @@ section#hero {
   max-height: 50vh;
   max-width: 60%;
   gap: 1rem;
-  border-radius: 15px;
   justify-content: center;
   align-content: center;
+  background-color: var(--bg-color-dark-transparent);
 }
 
 /* Hero image container */
