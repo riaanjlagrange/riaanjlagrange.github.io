@@ -453,6 +453,24 @@ section#projects .view-more:active {
   }
 }
 
+@media only screen and (max-height: 550px) and (orientation: landscape) {
+  section#hero .hero-social a:link,
+  section#hero .hero-social a:visited {
+    display: none;
+  }
+  section#hero .hero-info h2 {
+    font-size: 3rem;
+  }
+
+  section#hero .hero-img-container img {
+    max-height: 20rem;
+  }
+
+  section#hero .hero-info {
+    margin-top: 10rem;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .hero-container {
     padding-top: 10rem;
