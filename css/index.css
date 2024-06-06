@@ -533,7 +533,88 @@ section#projects .view-more:active {
     font-size: 1.5rem;
   }
 
+  section#hero .hero-info p {
+    font-size: 1.3rem;
+  }
+
+  section#skills .skills .skill i {
+    font-size: 3rem;
+  }
+
+  section#skills p {
+    font-size: 1rem;
+  }
+
+  section#projects .projects .project h3 {
+    font-size: 1.5rem;
+  }
+
+  section#projects .projects .project p {
+    font-size: 1rem;
+  }
+
   section#projects {
     width: 100%;
+  }
+}
+
+@media only screen and (max-height: 400px) and (orientation: landscape) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  section#hero {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  section#hero .hero-img-container img {
+    min-height: 30%;
+  }
+
+  section#hero .hero-info h2 {
+    font-size: 1.5rem;
+  }
+  section#hero .hero-info h3 {
+    font-size: 1.3rem;
+  }
+  section#hero .hero-info p {
+    font-size: 1rem;
+    width: 80%;
+  }
+  section#hero .hero-buttons a:link,
+  section#hero .hero-buttons a:visited {
+    font-size: 1rem;
+  }
+
+  section#hero .hero-social {
+    display: none;
+  }
+
+  section#skills .skills .skill i {
+    font-size: 3rem;
+  }
+
+  section#skills p {
+    font-size: 1rem;
+  }
+
+  section#projects .projects .project h3 {
+    font-size: 1.5rem;
+  }
+
+  section#projects .projects .project p {
+    font-size: 1rem;
+  }
+
+  section#projects {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  section#hero .hero-img-container img {
+    min-height: 20rem;
   }
 }
