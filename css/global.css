@@ -91,7 +91,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 2rem 5rem;
+  padding: 2rem 1rem;
   margin: 0 auto;
   border-bottom: 1px solid var(--text-color);
   position: fixed;
@@ -175,6 +175,7 @@ header .menu-overlay {
   background-color: var(--bg-color-dark);
   z-index: 5;
   opacity: 0.95;
+  transition: all 0.3s ease;
 }
 
 header .menu-overlay ul.mobile-navlist {
@@ -185,7 +186,7 @@ header .menu-overlay ul.mobile-navlist {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 header .menu-overlay ul.mobile-navlist li a:link,
@@ -214,6 +215,10 @@ header button.close-btn {
   font-size: 1.6rem;
   font-weight: 700;
   cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  z-index: 5;
 }
 
 /* -------------------- FOOTER -------------------- */
