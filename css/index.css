@@ -38,13 +38,13 @@ section#hero {
 section#hero .hero-img-container {
   grid-area: hero-img;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   max-width: 50rem;
 }
 
 section#hero .hero-img-container img {
-  max-height: 90%;
+  max-height: 30rem;
   border-radius: 50%;
   animation: 10s infinite move linear;
   box-shadow: 0 10px 50px -20px var(--text-color);
@@ -437,9 +437,8 @@ section#projects .view-more:active {
 }
 
 @media only screen and (max-width: 1400px) {
-  section#hero .hero-img-container {
-    max-width: 40rem;
-    margin-bottom: 5rem;
+  section#hero .hero-img-container img {
+    max-height: 30rem;
   }
 
   section#skills {
@@ -455,22 +454,27 @@ section#projects .view-more:active {
 }
 
 @media only screen and (max-width: 1200px) {
+  .hero-container {
+    padding-top: 10rem;
+    height: 100svh;
+  }
+
   section#hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 5rem;
   }
 
   section#hero .hero-img-container {
-    width: 30%;
     margin-bottom: 5rem;
+    width: 30%;
+    justify-content: center;
   }
 
   section#hero .hero-img-container img {
-    max-height: 20rem;
+    max-height: 15rem;
   }
 
   section#hero .hero-info {
@@ -480,12 +484,16 @@ section#projects .view-more:active {
     justify-content: center;
   }
 
+  section#hero .hero-info h2 {
+    font-size: 3rem;
+  }
   section#hero .hero-info p {
     text-align: center;
+    font-size: 1.4rem;
   }
 
   section#hero .hero-social {
-    justify-content: start;
+    margin-left: 0;
   }
 
   section#skills {
@@ -494,6 +502,16 @@ section#projects .view-more:active {
 
   section#projects {
     width: 50%;
+  }
+
+  section#hero .hero-buttons a:link,
+  section#hero .hero-buttons a:visited {
+    margin-bottom: 0;
+  }
+
+  section#hero .hero-social a:link,
+  section#hero .hero-social a:visited {
+    display: none;
   }
 }
 
@@ -590,13 +608,14 @@ section#projects .view-more:active {
   }
 
   section#hero {
-    margin-top: 10rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
   }
   section#hero .hero-img-container img {
-    min-height: 30%;
+    max-height: 15%;
   }
 
   section#hero .hero-info h2 {
@@ -612,6 +631,7 @@ section#projects .view-more:active {
   section#hero .hero-buttons a:link,
   section#hero .hero-buttons a:visited {
     font-size: 1rem;
+    margin-bottom: 0;
   }
 
   section#hero .hero-social {
@@ -636,10 +656,6 @@ section#projects .view-more:active {
 
   section#projects {
     width: 50%;
-  }
-
-  section#hero .hero-img-container img {
-    min-height: 20rem;
   }
 
   header .menu-overlay ul.mobile-navlist {
