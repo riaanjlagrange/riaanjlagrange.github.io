@@ -337,8 +337,7 @@ footer .footer-navbar li a:active {
   }
 
   header .logo-container .name {
-    font-size: 1.6rem;
-    gap: 6rem;
+    display: none;
   }
 
   footer .line {
@@ -355,5 +354,11 @@ footer .footer-navbar li a:active {
     width: 100%;
     flex-wrap: nowrap;
     height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 1080px) and (max-height: 800px) and (orientation: landscape) {
+  header .logo-container .name {
+    display: none;
   }
 }
