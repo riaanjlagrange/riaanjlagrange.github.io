@@ -523,6 +523,7 @@ section#projects .view-more:active {
   section#projects .projects .project a:link,
   section#projects .projects .project a:visited {
     font-size: 1.1rem;
+  }
 }
 
 @media only screen and (max-width: 403px) {
