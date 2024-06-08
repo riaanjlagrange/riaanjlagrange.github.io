@@ -609,7 +609,7 @@ section#projects a.view-more:active {
 
   .projects {
     flex-direction: column;
-    gap: 3rem;
+    gap: 10rem;
   }
 
   .project {
